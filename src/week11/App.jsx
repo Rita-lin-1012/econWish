@@ -10,25 +10,26 @@ import { IconButton } from '@mui/material';
 import appConfig from "../appConfig.json"
 import dataJson from "./data.json"
 import { Gallery, GalleryItem } from '../components/Layout3';
+import CardNew from '../components/CardNew';
 
 export default function App() {
 
     const users = convertUsersToArrayOfObject(dataJson)
 
-    const style = {margin: "auto", width: "370px"};
+    // const style = {margin: "auto", width: "370px"};
 
-    const cards = users.map((e, i) => {
-        return (
-            <GalleryItem key={i}>
-                <Card user={e} style={style}/>
-            </GalleryItem>
-        )
-    })
+    // const cards = users.map((e, i) => {
+    //     return (
+    //         <GalleryItem key={i}>
+    //             <Card user={e} style={style}/>
+    //         </GalleryItem>
+    //     )
+    // })
 
-    console.log(style)
+    console.log(users)
     return (
         <div className="App">
-            <Card user={users[0]} style={style}/>
+            <CardNew user={users[0]}/>
 {/*             
                 <Gallery>
                 {cards}
